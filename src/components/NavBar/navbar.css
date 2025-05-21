@@ -1,0 +1,151 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-image: url("D:\polagoni websites\vaikunta_ruchulu_web\vaikunta_ruchulu_restuarant_web\public\images\navbar_bg.jpg");
+    position: fixed;
+    z-index: 10;
+    color: black;
+    width: 100%;
+    font-family: 'Cinzel', serif;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+
+
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+    font-size: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-items a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color:#EFBF04;
+    transition: width 0.3s ease;
+    margin-top: 4px;
+}
+
+.nav-items a:hover::after {
+    width: 100%;
+}
+
+.nav-items a:hover {
+    color: #ffd235;
+}
+
+.nav-items a.active {
+    color: #ffd235;
+}
+
+.nav-items a.active::after {
+    width: 100%;
+}
+
+
+.image-container {
+    position: relative;
+    bottom: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+     left: 60px;
+}
+
+.positioned-image {
+    height: 100px;
+    width: 500px;
+    position: absolute;
+   
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 70px;
+        width: 300px;
+        height: 400px;
+        padding: 1rem;
+        gap: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        font-size: 1.1rem;
+    }
+
+
+    .nav-items.open {
+
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .nav-items a {
+        margin: 0.5rem 0;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hamburger.open {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hamburger.close {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+    .hamburger.open {
+        transform: scale(1.1) translateX(5px);
+    }
+
+
+    .hamburger.close {
+        transform: scale(0.9) translateX(-5px);
+    }
+
+
+    .image-container {
+        display: none;
+    }
+}

@@ -1,0 +1,66 @@
+.footer-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 600px;
+    font-family: 'Cinzel', serif;
+}
+
+.footer-image {
+    width: 1700px;
+    height: 400px;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    width: 1000px;
+
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-section {
+    font-size: 15px;
+    padding: 0 10px;
+
+}
+
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.footer-section ul li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: gold;
+    font-size: 10px;
+    top: 1px;
+}
