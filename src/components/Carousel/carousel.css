@@ -1,0 +1,230 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box; /* optional */
+}
+
+.carousel-content {
+    display: flex;
+    gap: 30px;
+}
+
+.carousel-image img,
+.carousel-img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    width: 500px;
+    margin-top: 15px;
+    padding-top: 120px;
+}
+
+.carousel-button  {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #d1a903;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.carousel-button svg{
+    color: #d1a903;;
+}
+
+.carousel-button:hover {
+    background-color: rgba(209, 169, 3, 0.1);
+}
+
+.carousel-button:active {
+    transform: scale(0.95);
+}
+
+/* Dots */
+.carousel-mobile-dots {
+    display: none;
+}
+
+/* Only show buttons on desktop */
+.desktop-only {
+    display: flex;
+}
+
+.carousel-rating {
+    margin-top: 8px;
+}
+
+.star {
+    font-size: 25px;
+    color: #FFD700; /* gold color */
+    margin-right: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 20px; /* reduced gap */
+    }
+
+    .carousel-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* reduce vertical spacing */
+    }
+
+    .carousel-image img,
+    .carousel-img {
+        max-width: 300px;
+        width: 280px;
+        height: 200px; /* fixed typo */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .carousel-text {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 10px;
+        padding-top: 0;
+    }
+
+    .text-stars {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    /* Hide desktop buttons */
+    .carousel-button.desktop-only {
+        display: none;
+    }
+
+    /* Show dots as tabs on mobile */
+    .carousel-mobile-dots {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        outline: none;
+    }
+
+    .carousel-dot:hover,
+    .carousel-dot:focus {
+        background-color: #bfa900; /* darker gold */
+        transform: scale(1.2);
+    }
+
+    .carousel-dot.active {
+        background-color: #d1a903;
+        box-shadow: 0 0 5px #d1a903;
+        transform: scale(1.4);
+        cursor: default;
+    }
+}
+
+@media (max-width: 1150px) {
+  /* styles for tablets and below */
+  .carousel-button.desktop-only {
+    display: none; /* hide desktop arrows */
+  }
+
+  .carousel-mobile-dots {
+    display: flex; /* show dots as tabs */
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+  }
+
+  .carousel-dot:hover,
+  .carousel-dot:focus {
+    background-color: #bfa900;
+    transform: scale(1.2);
+  }
+
+  .carousel-dot.active {
+    background-color: #d1a903;
+    box-shadow: 0 0 5px #d1a903;
+    transform: scale(1.4);
+    cursor: default;
+  }
+
+  /* Adjust carousel container and content for tablets */
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .carousel-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .carousel-image img,
+  .carousel-img {
+     /* a bit bigger on tablets */
+    width: 600px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .carousel-text {
+    width: 300px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 0;
+  }
+
+  .text-stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+}

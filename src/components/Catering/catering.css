@@ -1,0 +1,80 @@
+.cateraing-container {
+  background-size: cover;
+  background-position: center;
+
+}
+
+.catering-info {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.catering-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  gap: 100px;
+
+}
+
+
+
+.catering-content p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
+  padding: 20px;
+  padding-bottom: 40px;
+  color: #555;
+  white-space: pre-line;
+  width: 100%;
+
+}
+
+
+.catering-contact-details {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
+  padding: 20px;
+  padding-bottom: 40px;
+  color: #555;
+  white-space: pre-line;
+  width: 100%;
+}
+
+.catering-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+}
+
+.catering-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 500px;
+  padding-left: 75px;
+}
+
+.catering-form form button {
+  padding: 10px 30px;
+  background-color: rgb(18, 49, 18);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.catering-form form button:hover {
+  background-color: #ffa500;
+  color: white !important;
+
+}

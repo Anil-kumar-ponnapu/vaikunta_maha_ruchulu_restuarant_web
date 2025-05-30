@@ -14,7 +14,7 @@
 .text-overlay {
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 70%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 24px;
@@ -22,38 +22,48 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     pointer-events: none;
     width: 1000px;
-
+    padding-left: 200px;
+    width: 900px;
 
 }
 
 .footer-content {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 80px;
+    padding-top: 30px;
+   
 }
 
 .footer-section {
     font-size: 15px;
     padding: 0 10px;
+ width: 250px;
 
 }
 
 
 .footer-section h3 {
     font-size: 20px;
-    margin-bottom: 15px;
+
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
+
 }
 
 .footer-section ul li {
     position: relative;
     padding-left: 20px;
     margin-bottom: 8px;
+}
+.footer-secontion-content{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .footer-section ul li::before {
@@ -63,4 +73,80 @@
     color: gold;
     font-size: 10px;
     top: 1px;
+}
+
+.social-media-icon {
+    display: flex;
+    gap: 10px;
+    padding-left: 200px;
+    text-size-adjust: 200px;
+}
+
+.footer-vaikunta-logo {
+    width: 200px;
+    height: 150px;
+}
+
+
+@media (max-width:768px) {
+    .footer-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        height: auto;
+        font-family: 'Cinzel', serif;
+    }
+
+
+    .text-overlay {
+        position: absolute;
+
+        top: 50%;
+        left: 350px;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        pointer-events: none;
+        width: 1000px;
+
+
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer-image {
+        width: 400px;
+        height: 1200px;
+        display: block;
+    }
+
+    .footer-section h3 {
+        color: gold;
+    }
+
+    .footer-section ul li::before {
+        display: none;
+    }
+
+    .footer-vaikunta-logo {
+        width: 200px;
+        height: 150px;
+    }
+
+    .Footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 500px;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
 }

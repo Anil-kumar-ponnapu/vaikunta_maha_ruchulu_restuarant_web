@@ -1,0 +1,202 @@
+.footer-main-container {
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Use 'cover' instead of 'contain' to fill the entire area */
+    background-position: center;
+    padding: 40px 20px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    color: wheat;
+}
+
+.footer-vaikunta-logo {
+    width: 200px;
+    height: 150px;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+}
+
+.footer-section {
+   position: relative;
+   bottom: 70px;
+    min-width: 180px;
+}
+
+.footer-section h3 {
+    display: inline-block;
+    padding-left: 8px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #facc15;
+
+
+
+}
+
+.footer-section ul li {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer-section1 ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    min-width: 700px;
+
+}
+
+.footer-section1 h3 {
+    
+    display: inline-block;
+    padding-left: 19px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #facc15;
+
+}
+
+.footer-section1 ul li {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-contact-us-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 90px;
+    padding-top: 20px;
+
+}
+
+.footer-contact-heading {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+}
+
+.footer-contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .log-container {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .footer-vaikunta-logo {
+        width: 200px;
+        height: 150px;
+        padding-top: 100px;
+    }
+
+    .footer-vaikunta-logo {
+        width: 250px;
+        height: auto;
+    }
+
+    .info-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+
+    .footer-section h3,
+    .footer-section1 h3 {
+        font-size: 20px;
+        color: #facc15;
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li {
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 1.5;
+    }
+
+    .footer-section1 {
+        position: relative;
+        bottom: 50px;
+        right: 11px;
+
+    }
+
+    .footer-section1 ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        min-width: 300px;
+
+
+    }
+
+    .footer-contact-us-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 50px;
+        padding-top: 20px;
+
+    }
+
+   
+
+    .footer-section1 ul li:hover {
+        text-decoration: underline;
+    }
+    .footer-section ul li:hover {
+        text-decoration: underline;
+    }
+}

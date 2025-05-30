@@ -1,0 +1,33 @@
+.common-button {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+}
+
+.common-button:hover:not(:disabled) {
+    border-color: #ffa500;
+  color: #ffa500;
+}
+
+.common-button:focus-visible {
+  outline: 2px dashed #ccc;
+  outline-offset: 4px;
+}
+
+.common-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #aaa;
+  color: #aaa;
+}
+
