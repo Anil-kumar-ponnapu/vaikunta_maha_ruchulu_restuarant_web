@@ -13,21 +13,12 @@ const Specialities = () => {
         <div className="specialities-overlay">
           <p className="special-heading">OUR SPECIALITIES</p>
           <p className="description">
-            At <spam style={{ fontWeight: '700'}}>Vaikunta Maha Ruchulu</spam>, we take pride in serving soul-satisfying vegetarian dishes that blend tradition, taste, and health. Crafted with farm-fresh ingredients, time-honored recipes, and lots of love, here are our signature offerings that keep our guests coming back for more
+            At <spam style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu</spam>, we take pride in serving soul-satisfying vegetarian dishes that blend tradition, taste, and health. Crafted with farm-fresh ingredients, time-honored recipes, and lots of love, here are our signature offerings that keep our guests coming back for more
           </p>
 
           <div className="specials-grid">
 
-            <div className="card">
-              <img src="images\specialitiesImages\brinjal_image.svg" alt="Veg Pulao" />
-              <div className="overlay">
-                <h3>Gutti Vankaya</h3>
-                <p>
-                  A fragrant rice dish cooked with aromatic spices and mixed vegetables. It's a healthy and
-                  satisfying treat for all food lovers.
-                </p>
-              </div>
-            </div>
+
 
             {/* RR Veg Thali */}
             <div className="card">
@@ -38,7 +29,7 @@ const Specialities = () => {
               <div className="overlay">
                 <h3>Pesarattu - upma</h3>
                 <p>
-                  A wholesome and flavorful delight, this crispy moong dal crepe is perfectly pan-cooked and stuffed with warm, savory upma made from semolina and aromatic spices—bringing comfort
+                  Crispy green moong dal dosa (Pesarattu) paired with savory semolina upma—a wholesome, protein-rich South Indian breakfast duo
                 </p>
               </div>
             </div>
@@ -49,8 +40,8 @@ const Specialities = () => {
               <div className="overlay">
                 <h3>Veg - Thali</h3>
                 <p>
-                  Tender brinjals (eggplants) stuffed and simmered in a tangy tamarind-based gravy—a signature
-                  Andhra dish loved by many.
+                  Delicious Veg Thali – A Wholesome Feast of Flavors
+                  Savor a balanced meal with fresh curries, dal, rice, roti, and desserts. Pure vegetarian delight
                 </p>
               </div>
             </div>
@@ -59,8 +50,16 @@ const Specialities = () => {
               <div className="overlay">
                 <h3>Veg - Biriyani</h3>
                 <p>
-                  Tender brinjals (eggplants) stuffed and simmered in a tangy tamarind-based gravy—a signature
-                  Andhra dish loved by many.
+                  Savor the rich flavors of Veg Biryani – fragrant basmati rice, fresh veggies, and aromatic spices cooked to perfection. A delicious, wholesome feast for every occasion
+                </p>
+              </div>
+            </div>
+            <div className="card">
+              <img src="images\specialitiesImages\brinjal_image.svg" alt="Veg Pulao" />
+              <div className="overlay">
+                <h3>Gutti Vankaya</h3>
+                <p>
+                  Savory Andhra-style Gutti Vankaya – tender brinjals stuffed with aromatic spices & slow-cooked to perfection. A rich, flavorful curry that pairs best with steamed rice or roti
                 </p>
               </div>
             </div>

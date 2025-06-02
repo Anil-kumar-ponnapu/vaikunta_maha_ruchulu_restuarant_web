@@ -7,12 +7,12 @@ const navItems = [
     { name: "About", path: "/about" },
     { name: "Catering", path: "/catering" },
     { name: "Contact-Us", path: "/contact" },
-    
+
 ];
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const location = useLocation(); // Get current path
+    const location = useLocation(); 
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -21,13 +21,13 @@ export default function Navbar() {
             className="main-container"
             style={{
                 backgroundImage: "url('/images/informationCard.jpg')",
-                backgroundSize: "cover",        
-                backgroundPosition: "center",   
-                backgroundRepeat: "no-repeat",   
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
             }}
         >
             <div className="logo">
-                <img src="images/vaikuntlogo.png" className="vaikunta-logo" alt="Vaikunta Logo" />
+                <Link to={"/"}><img src="images/vaikuntlogo.png" className="vaikunta-logo" alt="Vaikunta Logo" /></Link>
             </div>
 
             <div

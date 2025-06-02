@@ -1,9 +1,9 @@
 import "./input.css"
 
-const CommanInputs = ({ id, type = "text", value, handleChange, placeholder, isTextArea = false }) => {
+const CommanInputs = ({ name, type = "text", value, handleChange, placeholder, isTextArea = false }) => {
     return isTextArea ? (
         <textarea
-            id={id}
+            name={name}
             value={value}
             onChange={handleChange}
             placeholder={placeholder}
@@ -11,7 +11,7 @@ const CommanInputs = ({ id, type = "text", value, handleChange, placeholder, isT
         />
     ) : (
         <input
-            id={id}
+            name={name}
             type={type}
             value={value}
             onChange={handleChange}

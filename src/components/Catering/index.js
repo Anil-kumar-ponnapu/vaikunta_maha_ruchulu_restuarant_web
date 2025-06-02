@@ -7,10 +7,10 @@ const Catering = () => {
         <>
             <div>
                 <Maincard
-                    image={"images/Konark sun temple.jpg"}
+                    image={"images/Delicious Catering.svg"}
                     title={"VEGETARIAN CATERING FOR EVERY EVENT"}
                     textClass={"top-left"}
-                    style={{ paddingTop: '80px', left: "20px", width: "400px" }}
+                    style={{ paddingTop: '80px', left: "20px", wnameth: "400px" }}
 
                 ></Maincard>
 
@@ -23,54 +23,86 @@ const Catering = () => {
                             <img src="asdcds">
                             </img>
                             <p>
-                                Rayalaseema Ruchulu takes much pride in making life’s every occasion memorable with scrumptious delights of Telugu cuisine. From intimate social events such as wedding parties, fundraising organizations, and social clubs. Our clients include corporations, to comprehensive corporate events for corporates such as Facebook, Wells Fargo, etc Rayalaseema Ruchulu has ensured happy taste buds, happy hearts and a happy tummy to every guest.
+                                At <spam style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu</spam> we craft authentic, homestyle pure veg meals using time-honored recipes and the freshest ingredients. From lavish wedding feasts to intimate gatherings, our culinary team brings generations of expertise to your plate – cooked with love, served with perfection.<br style={{ paddingTop: "8px" }} />
 
-                                We offer a variety of options for menu styles including buffet catering. Menus integrate flavors, using local, seasonal, organic ingredients and always can be customised to include gluten-free, dairy-free, and vegetarian options.
+
+                                <div style={{ paddingTop: "15px" }}>
+                                    <strong >
+                                        Why Choose Us?
+                                    </strong>
+                                    <ul style={{ paddingTop: "10px" }}>
+                                        <li>
+                                            100% Traditional Recipes – Grandmother’s secrets, modern presentation
+                                        </li>
+                                        <li>
+                                            Pure & Hygienic – No onion/garlic (optional), Jain/Sattvik menus available
+                                        </li>
+                                        <li>
+
+                                            Customizable Thalis – Regional specialties (North/South Indian, Maharashtrian, etc.)
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+
                             </p>
                         </div>
                         <div className="catering-contact-details">
-                            IF YOU ARE LOOKING FOR DELICIOUS, WHOLESOME FOOD AND CATERING SERVICES THEN ​PLEASE CALL US ON 8688686886 OR EMAIL US AT INFO@RAYALASEEMARUCHULU.COM​ALTERNATIVELY LEAVE US YOUR DETAILS BELOW AND WE WILL GET IN TOUCH WITH YOU
+
+                            CRAVING AUTHENTIC, HOMESTYLE VEGETARIAN CATERING? CALL US AT <spam style={{ color: "rgb(18, 49, 18)", fontWeight: '700' }}>7900368003</spam> OR EMAIL <spam style={{ color: "rgb(18, 49, 18)", fontWeight: '700' }}>INFO@VAIKUNTAMAHARUCHULU.COM</spam> FOR A DELICIOUS EXPERIENCE! LEAVE YOUR DETAILS BELOW, AND WE’LL HANDLE THE REST!
+
                         </div>
-                     
-                            <div className="catering-form">
-                                <form >
-                                    <CommanInputs
-                                        id="name"
-                                        value={""}
 
-                                        placeholder="Full Name"
+                        <div className="catering-form">
+                            <form >
+                                <CommanInputs
+                                name="name"
+                                    value={""}
+
+                                    placeholder="Full Name"
+                                />
+                                <CommanInputs
+                                    name="email"
+                                    type="email"
+                                    value={""}
+
+                                    placeholder="Email"
+                                />
+                                <CommanInputs
+                                    name="phone"
+                                    type="tel"
+                                    value={""}
+
+                                    placeholder="Phone Number"
+                                />
+                                 <CommanInputs
+                                    name="eventType"
+                                    type=""
+                                    value={""}
+
+                                    placeholder="Event Type"
+                                    
+                                />
+                                <CommanInputs
+                                    name="message"
+                                    value={""}
+
+                                    placeholder="Message"
+                                    isTextArea={true}
+                                />
+                                 
+                                <div>
+                                    <CommonButton
+                                        title={"Submit"}
+                                        type=""
+
                                     />
-                                    <CommanInputs
-                                        id="email"
-                                        type="email"
-                                        value={""}
+                                </div>
 
-                                        placeholder="Email"
-                                    />
-                                    <CommanInputs
-                                        id="phone"
-                                        type="tel"
-                                        value={""}
+                            </form>
 
-                                        placeholder="Phone Number"
-                                    />
-                                    <CommanInputs
-                                        id="message"
-                                        value={""}
-
-                                        placeholder="Message"
-                                        isTextArea={true}
-                                    />
-                                    <div>
-                                        <CommonButton
-                                            title={"Submit"}
-                                            type=""
-
-                                        />
-                                    </div>
-
-                                </form>
-                         
 
                         </div>
                     </div>

@@ -2,35 +2,45 @@ import CommanInputs from "../../comman/inputs";
 import Maincard from "../../comman/maincard";
 import { FaceBookIcon, InstagramIcon, TwiterIcon, Youtube } from "../Icons";
 import "./contactus.css";
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+const EmbeddedMap = () => (
+  <div style={{ width: '100%', height: '450px' }}>
+    <iframe
+      title="My Map"
+      src="https://maps.app.goo.gl/fvM1JCDXhq3jeE4d7"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+);
+
+
 
 const ContactUs = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-    });
-    console.log(formData)
-
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        setFormData({ ...formData, [id]: value });
-    };
+    const form = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        const phoneNumber = "7799430410"
-        const text = `Hello! My name is anil  `;
 
-
-        const encodedText = encodeURIComponent(text);
-
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
-
-        window.open(whatsappURL, "_blank");
-
+        emailjs
+            .sendForm('service_x4zqyi6', 'template_7fss39q', form.current, {
+                publicKey: 'ViCJ5k1iMjGWvEHS_',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    e.target.reset(); // Reset form fields
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                }
+            );
     };
 
     return (
@@ -38,50 +48,41 @@ const ContactUs = () => {
             <div>
                 <Maincard
                     image={"images/noppon-meenuch-MPLIm0LynRQ-unsplash.jpg"}
-                    title={"Contact Us"}
+                    title={"CONTACT US"}
                 />
             </div>
 
             <div className="contact-container">
-
-                <img src="images/informationCard.jpg" className="contact-card" />
+                <img src="images/informationCard.jpg" className="contact-card" alt="Contact" />
 
                 <div className="contact-details">
                     <div className="contact-form-container">
-                        <form onSubmit={handleSubmit}>
+                        <form ref={form} onSubmit={handleSubmit}>
                             <CommanInputs
-                                id="name"
-                                value={formData.name}
-                                handleChange={handleChange}
+                                name="name"
                                 placeholder="Full Name"
                             />
                             <CommanInputs
-                                id="email"
+                                name="email"
                                 type="email"
-                                value={formData.email}
-                                handleChange={handleChange}
                                 placeholder="Email"
                             />
                             <CommanInputs
-                                id="phone"
+                                name="phoneNo"
                                 type="tel"
-                                value={formData.phone}
-                                handleChange={handleChange}
                                 placeholder="Phone Number"
                             />
                             <CommanInputs
-                                id="message"
-                                value={formData.message}
-                                handleChange={handleChange}
+                                name="message"
                                 placeholder="Message"
                                 isTextArea={true}
                             />
                             <div>
                                 <button type="submit" className="submit-btn">Submit</button>
                             </div>
-
                         </form>
                     </div>
+
                     <div className="contact-info-container">
                         <div className="section">
                             <h2 className="heading">ADDRESS</h2>
@@ -107,7 +108,11 @@ const ContactUs = () => {
                                     <path d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z" />
                                 </svg>
 
-                                <p>info@vaikuntamaharuchulu.com</p>
+                                <p>
+                                    <a href="mailto:info@vaikuntamaharuchulu.com">
+                                        info@vaikuntamaharuchulu.com
+                                    </a>
+                                </p>
                             </div>
                         </div>
 
@@ -134,9 +139,13 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+         
             </div>
-
+            <div>
+    <EmbeddedMap/>
+</div>
         </>
     );
 };
