@@ -17,10 +17,6 @@ const Specialities = () => {
           </p>
 
           <div className="specials-grid">
-
-
-
-            {/* RR Veg Thali */}
             <div className="card">
               <div>
                 <img src="images\specialitiesImages\pasarattu_upma_image.svg" alt="RR Veg Thali" />

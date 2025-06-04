@@ -1,8 +1,67 @@
+import { useState } from "react"
 import CommonButton from "../../comman/Button"
 import CommanInputs from "../../comman/inputs"
 import Maincard from "../../comman/maincard"
 import "./catering.css"
 const Catering = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phoneNo: "",
+        eventType: "",
+        message: ""
+
+
+    })
+    const [error, setErrors] = useState({})
+    const [success, SetSuccess] = useState("")
+
+    setTimeout(() => {
+        SetSuccess("")
+    }, 10000)
+    const handelChangeFormData = (e) => {
+        const { name, value } = e.target
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
+        }))
+    }
+    const submitForm = (e) => {
+        e.preventDefault();
+
+        const newErrors = {};
+
+        if (!formData.name.trim()) {
+            newErrors.name = "Name is required";
+        }
+
+        if (!formData.email.trim()) {
+            newErrors.email = "Email is required";
+        }
+
+        if (!formData.phoneNo.trim()) {
+            newErrors.phoneNo = "Phone Number is required";
+        }
+
+        if (!formData.eventType.trim()) {
+            newErrors.eventType = "Event Type is required";
+        }
+
+        if (!formData.message.trim()) {
+            newErrors.message = "Message is required";
+        }
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length === 0) {
+
+            SetSuccess("Thanks for reaching out to us!");
+            setFormData(formData);
+        }
+    };
+
+
+
     return (
         <>
             <div>
@@ -14,14 +73,15 @@ const Catering = () => {
 
                 ></Maincard>
 
-                <section
+                <div
                     className="cateraing-conainer"
                     style={{ backgroundImage: "url('/images/informationCard.jpg')" }}
                 >
                     <div className="catering-info">
                         <div className="catering-content">
-                            <img src="asdcds">
-                            </img>
+                            <img src="images/Catering-logo.svg" alt="Catering" className="catering-log" />
+
+
                             <p>
                                 At <spam style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu</spam> we craft authentic, homestyle pure veg meals using time-honored recipes and the freshest ingredients. From lavish wedding feasts to intimate gatherings, our culinary team brings generations of expertise to your plate – cooked with love, served with perfection.<br style={{ paddingTop: "8px" }} />
 
@@ -56,57 +116,65 @@ const Catering = () => {
                         </div>
 
                         <div className="catering-form">
-                            <form >
+                            <form onSubmit={submitForm}>
                                 <CommanInputs
-                                name="name"
-                                    value={""}
-
+                                    name="name"
+                                    value={formData.name}
+                                    handleChange={handelChangeFormData}
                                     placeholder="Full Name"
+                                    error={error.name}
                                 />
                                 <CommanInputs
                                     name="email"
                                     type="email"
-                                    value={""}
-
+                                    value={formData.email}
+                                    handleChange={handelChangeFormData}
                                     placeholder="Email"
+                                    error={error.email}
                                 />
                                 <CommanInputs
-                                    name="phone"
+                                    name="phoneNo"
                                     type="tel"
-                                    value={""}
-
+                                    value={formData.phoneNo}
+                                    handleChange={handelChangeFormData}
                                     placeholder="Phone Number"
+                                    error={error.phoneNo}
                                 />
-                                 <CommanInputs
+                                <CommanInputs
                                     name="eventType"
                                     type=""
-                                    value={""}
-
+                                    value={formData.eventType}
+                                    handleChange={handelChangeFormData}
                                     placeholder="Event Type"
-                                    
+                                    error={error.eventType}
+
                                 />
                                 <CommanInputs
                                     name="message"
-                                    value={""}
-
+                                    value={formData.message}
+                                    handleChange={handelChangeFormData}
                                     placeholder="Message"
                                     isTextArea={true}
+                                    error={error.message}
                                 />
-                                 
+                                {success ? <p className="success-message-catering">{success}</p> : ""}
+
                                 <div>
                                     <CommonButton
                                         title={"Submit"}
                                         type=""
+                                        onSubmit={submitForm}
 
                                     />
                                 </div>
+
 
                             </form>
 
 
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
 
         </>

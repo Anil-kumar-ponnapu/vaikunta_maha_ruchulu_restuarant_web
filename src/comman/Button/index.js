@@ -6,6 +6,7 @@ const CommonButton = ({
   type = "button",
   disabled = false,
   className = "",
+  onSubmit
 }) => {
   return (
     <button
@@ -13,6 +14,7 @@ const CommonButton = ({
       onClick={onClick}
       disabled={disabled}
       className={`common-button ${className}`}
+      onSubmit={onSubmit}
     >
       {title}
     </button>

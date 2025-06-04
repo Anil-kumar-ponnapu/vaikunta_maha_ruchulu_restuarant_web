@@ -2,46 +2,78 @@ import CommanInputs from "../../comman/inputs";
 import Maincard from "../../comman/maincard";
 import { FaceBookIcon, InstagramIcon, TwiterIcon, Youtube } from "../Icons";
 import "./contactus.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const EmbeddedMap = () => (
-  <div style={{ width: '100%', height: '450px' }}>
-    <iframe
-      title="My Map"
-      src="https://maps.app.goo.gl/fvM1JCDXhq3jeE4d7"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+    <div style={{ width: '100%', height: '450px' }}>
+        <iframe
+            title="My Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.1387191184645!2d83.30280877512796!3d17.738101792607203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943439b0ab007%3A0xe0975d1682ebe6c4!2sVaikunta%20Maha%20Ruchulu!5e0!3m2!1sen!2sin!4v1749029930091!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
 );
 
 
 
 const ContactUs = () => {
-    const form = useRef();
+    const form = useRef(null);
+    const [errors, setErrors] = useState({
+        name: '',
+        email: '',
+        phoneNo: '',
+        message: ''
+    });
 
+    const [success, setSuccess] = useState("")
+
+    setTimeout(() => {
+        setSuccess("")
+    }, 10000)
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const formElements = form.current.elements;
+
+        const name = formElements.name.value.trim();
+        const email = formElements.email.value.trim();
+        const phoneNo = formElements.phoneNo.value.trim();
+        const message = formElements.message.value.trim();
+
+        const newErrors = {
+            name: name ? '' : 'Name is required',
+            email: email ? '' : 'Email is required',
+            phoneNo: phoneNo ? '' : 'Phone number is required',
+            message: message ? '' : 'Message is required',
+        };
+
+        setErrors(newErrors);
+
+        const hasErrors = Object.values(newErrors).some(error => error !== '');
+        if (hasErrors) return;
 
         emailjs
             .sendForm('service_x4zqyi6', 'template_7fss39q', form.current, {
                 publicKey: 'ViCJ5k1iMjGWvEHS_',
             })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    e.target.reset(); // Reset form fields
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                }
-            );
+            .then(() => {
+                console.log('SUCCESS!');
+                e.target.reset();
+                setErrors({});
+                setSuccess("Thank`s For Contact Us")
+            })
+            .catch((error) => {
+                setSuccess('FAILED...');
+            });
     };
+
+
 
     return (
         <>
@@ -52,8 +84,11 @@ const ContactUs = () => {
                 />
             </div>
 
-            <div className="contact-container">
-                <img src="images/informationCard.jpg" className="contact-card" alt="Contact" />
+            <div
+                className="contact-container"
+                style={{ backgroundImage: 'url("images/informationCard.jpg")' }}
+            >
+
 
                 <div className="contact-details">
                     <div className="contact-form-container">
@@ -61,22 +96,31 @@ const ContactUs = () => {
                             <CommanInputs
                                 name="name"
                                 placeholder="Full Name"
+                                error={errors.name}
                             />
+
                             <CommanInputs
                                 name="email"
                                 type="email"
                                 placeholder="Email"
+                                error={errors.email}
                             />
                             <CommanInputs
                                 name="phoneNo"
                                 type="tel"
                                 placeholder="Phone Number"
+                                error={errors.phoneNo}
                             />
                             <CommanInputs
                                 name="message"
                                 placeholder="Message"
                                 isTextArea={true}
+                                error={errors.message}
                             />
+                            <p className="success-message">
+                                {success ? success : ""}
+                            </p>
+
                             <div>
                                 <button type="submit" className="submit-btn">Submit</button>
                             </div>
@@ -92,7 +136,7 @@ const ContactUs = () => {
                                 </svg>
                                 <p>
                                     Door. No. 50-121-60/1A, 4th Town Police Station Road,
-                                    Balayya Sastry Layout, Seethammadhara, Visakhapatnam – 530013
+                                    Seethammadhara, Visakhapatnam – 530013
                                 </p>
                             </div>
                             <div className="info-item">
@@ -123,29 +167,29 @@ const ContactUs = () => {
                                     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd" />
                                 </svg>
 
-                                <p>Opens Timings <spam>{"  "}</spam>6:30 Am – 11:30 Pm,</p>
+                                <p>Opens Timings <spam>{"  "}</spam>6:00 Am – 11:30 Pm,</p>
                             </div>
                         </div>
 
                         <div className="section">
                             <h2 className="heading">FOLLOW US</h2>
                             <div className="social-icons">
-                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/profile.php?id=61576739745925" target="_blank" rel="noopener noreferrer">
                                     <FaceBookIcon />
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCjLMcurPc2E0pAxYzi1srVQ" target="_blank"><InstagramIcon /> </a>
+                                <a href="https://www.instagram.com/vaikuntamaharuchulu/" target="_blank"><InstagramIcon /> </a>
                                 <a href="https://x.com/maharuchul23219" target="_blank"><TwiterIcon /></a>
                                 <a href="https://www.youtube.com/@VaikuntaMahaRuchulu" target="_blank"><Youtube /></a>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
-         
+
             </div>
             <div>
-    <EmbeddedMap/>
-</div>
+                <EmbeddedMap />
+            </div>
         </>
     );
 };
