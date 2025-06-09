@@ -90,8 +90,10 @@ const Footer = () => {
 
                                         className="hover-underline"
                                     >
-                                        50-121-60/1A, 4th Town Police Station Road,
-                                        <br /> Seethammadhara, Visakhapatnam – 530013
+                                        Door. No. 50-121-60/1A, 4th Town Police Station Road,
+                                        <br /> Balayya Sastry Layout, 
+                                        Seethammadhara,
+                                        Visakhapatnam Pin No– 530 013
                                     </a>
                                 </li>
 
