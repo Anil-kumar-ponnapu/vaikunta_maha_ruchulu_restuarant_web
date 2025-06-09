@@ -1,6 +1,7 @@
-.cateraing-container {
+.cateraing-conainer {
   background-size: cover;
   background-position: center;
+  width: 100%;
 
 }
 
@@ -14,13 +15,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
   padding-top: 60px;
-  gap: 100px;
-
+ gap: 20px;
+ 
 }
-
-
 
 .catering-content p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,14 +28,11 @@
   color: #555;
   white-space: pre-line;
   width: 100%;
-
 }
-
 
 .catering-contact-details {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.05rem;
-  padding: 20px;
   padding-bottom: 40px;
   color: #555;
   white-space: pre-line;
@@ -48,9 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-right: 50px;
-  padding-bottom: 60px;
+  padding: 20px 20px 60px 20px;
 }
 
 .catering-form form {
@@ -58,8 +51,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  width: 500px;
-  padding-left: 75px;
+  width: 100%;
+  max-width: 500px;
+  padding-left: 0;
 }
 
 .catering-form form button {
@@ -76,5 +70,49 @@
 .catering-form form button:hover {
   background-color: #ffa500;
   color: white !important;
+}
 
+.success-message-catering {
+  color: #28a745;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.catering-log{
+  width: 200px;
+  background: transparent !important;
+}
+@media (max-width: 768px) {
+  .catering-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .catering-form {
+    padding: 20px;
+  }
+
+  .catering-form form {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .catering-content p,
+  .catering-contact-details {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: start;
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+  .success-message-catering {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    
+    text-align: center;
+  }
 }

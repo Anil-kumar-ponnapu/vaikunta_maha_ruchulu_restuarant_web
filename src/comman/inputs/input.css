@@ -4,12 +4,13 @@
   border-radius: 5px;
   font-size: 1rem;
   color: #333;
-  background-color: transparent; /* Ensures no background color is applied */
+  background-color: transparent;
+
 }
 
 .common-input:hover,
 .common-input:focus {
-  border-color:#ffa500;
+  border-color: #ffa500;
   box-shadow: 0 0 5px rgb(226, 225, 222);
   outline: none;
 }
@@ -17,5 +18,13 @@
 .textarea {
   min-height: 100px;
   resize: vertical;
-  background-color: transparent; /* Also remove background from textarea */
+  background-color: transparent;
+  
+}
+
+.error-text {
+  color: red;
+  font-size: 1rem;
+  margin-top: -10px;
+  padding-left: 8px;
 }

@@ -7,7 +7,7 @@ const About = () => {
             <div>
                 <Maincard
                     image={"images/4.png"}
-                    title={"About Us"} />
+                    title={"ABOUT US"} />
             </div>
             <div className="about-container">
                 <div className="about-card-wrapper">
