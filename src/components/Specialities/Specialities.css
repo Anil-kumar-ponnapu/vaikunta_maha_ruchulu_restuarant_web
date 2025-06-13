@@ -1,12 +1,11 @@
-.specialities {
+.vmr-special-section {
   background-size: cover;
   background-position: center;
   padding: 60px 20px;
   display: flex;
-
 }
 
-.specialities-overlay {
+.vmr-overlay {
   padding: 50px 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -14,20 +13,19 @@
   color: #0a0909;
 }
 
-.special-heading {
-  font-family: 'Cinzel', serif;
+.vmr-heading {
+
   font-size: 1.8rem;
   font-weight: bold;
   color: #1d4d2c;
-
-  border-left: 4px solid #f6921e;
-
+  /* border-left: 4px solid #f6921e; */
   padding-left: 12px;
-  margin-bottom: 20px;
-  text-align: left;
+  margin-bottom: 6px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
 }
 
-.description {
+.vmr-description {
   font-size: 1.05rem;
   padding: 20px;
   padding-bottom: 40px;
@@ -36,96 +34,141 @@
   width: 1000px;
 }
 
-.specials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* 4 columns */
-  gap: 30px;
-}
-
-.card {
+.vmr-carousel-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   position: relative;
-  width: 300px;
-  height: 350px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  /* <-- This is crucial for absolute buttons */
 }
 
-.card:hover {
-  transform: scale(1.05);
+.vmr-carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 30px;
+  height: 400px;
 }
 
-.card img {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-}
-
-.card .overlay {
-  position: absolute;
-  display: inline;
-  bottom: 0;
-  background: rgb(25, 49, 25);
-  color: #fff;
-  width: 100%;
-  padding: 15px;
-  height: 165px;
+.vmr-carousel-card {
+  flex: 0 0 33.3333%;
   box-sizing: border-box;
+  padding: 10px;
 }
 
-.card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #ffa500;
+.vmr-carousel-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.card p {
-  font-size: 16px;
-  line-height: 1.4;
+.vmr-carousel-card h3 {
+  margin: 0.5rem 0 0.25rem;
 }
 
-/* Responsive design */
+.vmr-carousel-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+.vmr-carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: 2px solid #d1a903;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 500;
+}
+
+
+.vmr-carousel-button svg {
+  color: #d1a903;
+}
+
+.vmr-carousel-button:hover {
+  background-color: rgba(209, 169, 3, 0.1);
+}
+
+.vmr-carousel-button:active {
+  transform: scale(0.95);
+}
+
+.vmr-carousel-button:first-of-type {
+  left: -100px;
+}
+
+.vmr-carousel-button:last-of-type {
+  right: -150px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
-    height: 400px;
+  .vmr-overlay {
+    padding: 0 0;
+    margin: 0 auto;
+    border-radius: 12px;
+    color: #0a0909;
+    width: 400px;
   }
 
-  .specialities-overlay {
-    padding: 30px 20px;
-  }
-
-  .description {
-    width: 100%;
+  .vmr-description {
+    width: 350px;
     padding-top: 40px;
-    font-size: 16px;
+    font-size: 1.2rem;
     text-align: left;
   }
 
-  .special-heading {
+  .vmr-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
-
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     font-weight: bold;
   }
 
-  .specialities-overlay h2 {
-    font-size: 24px;
+  .vmr-carousel-content {
+    flex-direction: column;
+    height: auto;
   }
 
-  .card img {
-    height: 250px;
-    
+  .vmr-carousel-card {
+    flex: 0 0 auto;
+    padding: 5px;
+    height: 400px;
   }
 
-  .overlay p {
-    width: 290px;
-    height: 100px;
+  .vmr-carousel-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .vmr-carousel-card h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .vmr-carousel-card p {
+    width: 340px;
+    font-size: 14px;
+    color: #444;
+    font-size: 1.2rem;
+
+    padding-top: 10px;
+  }
+
+  .vmr-carousel-button {
+    display: none;
   }
 }

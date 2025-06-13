@@ -25,7 +25,7 @@ export default function Navbar() {
   const location = useLocation();
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const [show, setShow] = useState(false)
-  console.log("my contnet", show)
+
   const [subArray, setSubArray] = useState(false)
 
 
@@ -67,7 +67,18 @@ export default function Navbar() {
             <div>
               <Link to={item.path}
 
-                onClick={() => setSubArray(subArray == index ? null : index)}>
+                onClick={(e) => {
+                  if (item.subArray) {
+                    e.preventDefault()
+                    setSubArray(subArray == index ? null : index)
+                    
+                  } else {
+                    setMenuOpen(false);
+                    setSubArray(null);
+                  }
+                }}
+
+              >
                 <span
                   className="nav-link"
                   onClick={() => setShow(!show)}

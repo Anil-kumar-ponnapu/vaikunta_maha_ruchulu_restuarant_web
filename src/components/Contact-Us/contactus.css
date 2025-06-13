@@ -101,6 +101,9 @@
   color: black; 
   text-decoration: none;
 }
+.info-item a{
+  display: flex;
+}
 
 .info-item p:hover {
   color: rgb(28, 175, 28);

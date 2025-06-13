@@ -3,6 +3,7 @@
   padding-left: 200px;
   font-size: 40px;
   font-family: 'Cinzel', serif;
+  
 }
 
 .card-container {
@@ -30,10 +31,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 60px;
-  padding-left: 600px;
+  padding-bottom: 20px;
+  padding-left: 10px;
   font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -152,21 +153,26 @@
 
 
   .info-container {
-    height: auto;
+    height: 900px;
   }
 
   .info-textcontent {
     font-size: 18px;
     padding: 8px 16px;
+ 
   }
 
   .review-heading {
 
-    padding-bottom: 60px;
-    padding-right: 600px;
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+    
+    font-size: 1.8rem;
+  font-weight: bold;
+  color: #1d4d2c;
+  /* border-left: 4px solid #f6921e; */
+  padding-left: 12px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
   }
 
 }

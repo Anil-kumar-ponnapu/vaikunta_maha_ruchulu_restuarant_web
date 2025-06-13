@@ -6,12 +6,18 @@
     flex-wrap: nowrap;
     padding: 20px;
     position: relative;
-    box-sizing: border-box; /* optional */
+    box-sizing: border-box;
+  
 }
 
 .carousel-content {
     display: flex;
-    gap: 30px;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
 }
 
 .carousel-image img,
@@ -22,16 +28,41 @@
     border-radius: 10px;
 }
 
+.text-stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
 .carousel-text {
+
     font-size: 1.2rem;
-    font-weight: 500;
+    
     color: #333;
     width: 500px;
     margin-top: 15px;
-    padding-top: 120px;
+    padding-bottom: 10px;
 }
 
-.carousel-button  {
+.carousel-text h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.review_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    text-align: left;
+}
+
+
+.carousel-button {
     width: 50px;
     height: 50px;
     border: 2px solid #d1a903;
@@ -44,8 +75,10 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.carousel-button svg{
-    color: #d1a903;;
+
+.carousel-button svg {
+    color: #d1a903;
+    ;
 }
 
 .carousel-button:hover {
@@ -61,72 +94,51 @@
     display: none;
 }
 
-/* Only show buttons on desktop */
-.desktop-only {
-    display: flex;
-}
 
-.carousel-rating {
-    margin-top: 8px;
-}
 
 .star {
     font-size: 25px;
-    color: #FFD700; /* gold color */
+    color: #FFD700;
+
     margin-right: 4px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .carousel-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 20px; /* reduced gap */
-    }
 
     .carousel-content {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 15px; /* reduce vertical spacing */
+        justify-content: center
     }
 
-    .carousel-image img,
-    .carousel-img {
-        max-width: 300px;
-        width: 280px;
-        height: 200px; /* fixed typo */
-        object-fit: cover;
-        border-radius: 10px;
+    .info-container {
+        height: 1000px;
     }
 
     .carousel-text {
-        width: 100%;
-        font-size: 1rem;
-        text-align: center;
-        margin-top: 10px;
-        padding-top: 0;
+        width: 340px;
+        height: 300px;
+        font-family: 'Cinzel', serif;
     }
 
-    .text-stars {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
+    .carousel-text h1 {
+        padding-bottom: 3px;
     }
 
-    /* Hide desktop buttons */
     .carousel-button.desktop-only {
         display: none;
     }
 
-    /* Show dots as tabs on mobile */
     .carousel-mobile-dots {
         display: flex;
         justify-content: center;
+
+        align-items: center;
         gap: 12px;
-        margin-top: 10px;
+        margin: 20px auto 0;
+
+        width: fit-content;
+
     }
 
     .carousel-dot {
@@ -141,7 +153,8 @@
 
     .carousel-dot:hover,
     .carousel-dot:focus {
-        background-color: #bfa900; /* darker gold */
+        background-color: #bfa900;
+
         transform: scale(1.2);
     }
 
@@ -151,80 +164,4 @@
         transform: scale(1.4);
         cursor: default;
     }
-}
-
-@media (max-width: 1150px) {
-  /* styles for tablets and below */
-  .carousel-button.desktop-only {
-    display: none; /* hide desktop arrows */
-  }
-
-  .carousel-mobile-dots {
-    display: flex; /* show dots as tabs */
-    justify-content: center;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .carousel-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 20px;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    outline: none;
-  }
-
-  .carousel-dot:hover,
-  .carousel-dot:focus {
-    background-color: #bfa900;
-    transform: scale(1.2);
-  }
-
-  .carousel-dot.active {
-    background-color: #d1a903;
-    box-shadow: 0 0 5px #d1a903;
-    transform: scale(1.4);
-    cursor: default;
-  }
-
-  /* Adjust carousel container and content for tablets */
-  .carousel-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    gap: 20px;
-  }
-
-  .carousel-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .carousel-image img,
-  .carousel-img {
-     /* a bit bigger on tablets */
-    width: 600px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .carousel-text {
-    width: 300px;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 10px;
-    padding-top: 0;
-  }
-
-  .text-stars {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
 }

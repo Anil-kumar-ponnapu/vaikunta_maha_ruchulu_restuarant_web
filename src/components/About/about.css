@@ -19,9 +19,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
+
+
   padding: 10px 20px;
   border-radius: 8px;
 }
@@ -32,7 +31,6 @@
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-
   line-height: 1.8;
 }
 
@@ -42,7 +40,7 @@
   font-weight: bold;
   color: #1d4d2c;
 
-  border-left: 4px solid #f6921e;
+  /* border-left: 4px solid #f6921e; */
 
   padding-left: 12px;
   margin-bottom: 20px;
@@ -53,6 +51,7 @@
   font-size: 1.05rem;
   color: #555;
   margin-bottom: 2rem;
+  padding-left: 30px;
   white-space: pre-line;
   width: 900px;
 }
@@ -81,8 +80,10 @@
     display: inline-block;
     width: 100%;
   }
-    .specials-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+    /* 1 column on mobile */
   }
 
   .about-card {
@@ -109,7 +110,7 @@
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    border-bottom: 2px solid #e67e22;
+    /* border-bottom: 2px solid #e67e22; */
     padding-bottom: 8px;
     width: 100%;
   }
