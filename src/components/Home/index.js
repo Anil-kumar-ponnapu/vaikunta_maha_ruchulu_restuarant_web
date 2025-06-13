@@ -23,8 +23,9 @@ const Home = () => {
       </div>
 
       <div>
-        <Maincard
-          image={"images/Konark sun temple.jpg"}
+        <div>
+          <Maincard
+          image={"images/dini table.svg"}
           title={"BOOK A TABLE FOR DINE-IN"}
           textClass="top-left"
         >
@@ -34,14 +35,16 @@ const Home = () => {
           />
 
         </Maincard>
+        </div>
+       
         <div className='info-container'>
-          <img src="images/informationCard.jpg" style={{ width: "100%", height: "600px" }} alt="Background" />
+          <img src="images/informationCard.jpg" style={{ width: "100%", height: "100%" }} alt="Background" />
 
           <div className='info-textcontent'>
             <p className='review-heading'>TESTIMONIALS</p>
-            <div className=''>
+         
               <Carousel />
-            </div>
+            
           </div>
 
         </div>

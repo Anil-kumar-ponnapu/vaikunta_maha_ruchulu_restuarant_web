@@ -3,7 +3,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-size: cover;
-    /* Use 'cover' instead of 'contain' to fill the entire area */
+
     background-position: center;
     padding: 40px 20px;
 
@@ -68,7 +68,7 @@
 }
 
 .footer-section1 h3 {
-
+    margin-top: 30px;
     display: inline-block;
     padding-left: 19px;
     font-size: 24px;
@@ -79,7 +79,7 @@
 
 .footer-section1 ul li {
     font-size: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
 }
 
 .footer-section ul li:hover {
@@ -89,7 +89,7 @@
 .hover-underline {
     cursor: pointer;
     color: white;
-    text-decoration: none;
+    text-decoration: none;padding-bottom: 8px;
 }
 
 .hover-underline:hover {
@@ -164,17 +164,18 @@
     }
 
     .footer-section ul li {
-        font-size: 15px;
+        font-size: 16px;
         color: #fff;
-        margin-bottom: 8px;
+
         display: flex;
         align-items: center;
         line-height: 1.5;
     }
 
+
     .footer-section1 {
         position: relative;
-        bottom: 50px;
+        bottom: 80px;
         right: 11px;
 
     }
@@ -183,14 +184,26 @@
         display: flex;
         align-items: flex-start;
         gap: 15px;
-        margin-bottom: 10px;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.5;
         color: #fff;
-        min-width: 300px;
+
 
 
     }
+
+    .footer-section1 ul li {
+        display: flex;
+        align-items: flex-start;
+        /* aligns top of icon and text */
+        gap: 10px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.5;
+        width: 400px;
+    }
+
+
 
     .footer-contact-us-container {
         display: flex;
