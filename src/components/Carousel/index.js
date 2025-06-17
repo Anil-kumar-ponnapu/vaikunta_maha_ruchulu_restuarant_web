@@ -4,29 +4,29 @@ import './carousel.css';
 const Carousel = () => {
     const slides = [
         {
-            name: "Anil kumar",
+            name: "Anil",
             image: 'images/testmonials/Veg_Thali.svg',
-            text: 'Loved the Special Veg Thali at Vaikunta Maha Ruchulu! Every dish was flavorful, perfectly spiced, and served with warmth—just like a festive meal at home. Clean, satisfying, and a must-try! Will be back  ',
+            text: 'Loved the Special Veg Thali at Vaikunta Maha Ruchulu! Every dish was flavorful, perfectly spiced, and served with warmth just like a festive meal at home. Clean, satisfying, and a must-try! Will be back  ',
         },
 
         {
-            name: "Shan",
+            name: "Madhavi",
             image: 'images/testmonials/Paneer_Butter_Masala.svg',
             text: 'The Paneer Butter Masala at Vaikunta Maha Ruchulu is a rich, creamy delight! Tender paneer cubes bathed in a buttery tomato gravy smooth, mildly spiced, and deeply comforting.',
         },
         {
-            name: "Shan",
+            name: "Tirupathi Reddy",
             image: 'images/testmonials/idly.svg',
             text: "Soft, fluffy, and steaming hot—the idlis at Vaikunta Maha Ruchulu are pure perfection! Paired with rich sambar and velvety coconut chutney, it's a wholesome, homely delight. Light, nourishing, and a must-visit for South Indian food lovers!",
         },
         {
-            name: "Shan",
+            name: "Jagadeesh",
             image: 'images/testmonials/Sambar_Rice.svg',
             text: "Sambar Rice at Vaikunta Maha Ruchulu is the ultimate comfort food perfectly cooked rice infused with fragrant, tangy sambar, balanced with the right spices and veggies. Served piping hot with crispy papad and pickle, it’s simple, soulful, and deeply satisfying! Jagadesh",
         },
 
         {
-            name: "Shan",
+            name: "Mathura mahalingam",
             image: 'images/testmonials/pulihora.svg',
             text: "Pulihora at Vaikunta Maha Ruchulu is a nostalgic delight! With its perfect balance of tangy tamarind and bold spices, every bite bursts with authentic South Indian flavor. Simple, soulful, and a must-try for lovers of classic Andhra cuisine",
         }
@@ -68,11 +68,10 @@ const Carousel = () => {
 
                     <img src={slides[index].image} alt="Slide" className="carousel-img" />
                 </div>
-                <div className='review_container'>
-
+                <div className='review_container carousel-slide fade-slide ' >
                     <div className='carousel-text'>
                         {slides[index].text}
-                        <p>
+                        <div>
                             <h1>
                                 {slides[index].name}
                             </h1>
@@ -84,10 +83,7 @@ const Carousel = () => {
                                     </span>
                                 ))}
                             </div>
-
-
-
-                        </p>
+                        </div>
                     </div>
 
                     <div className="carousel-mobile-dots">

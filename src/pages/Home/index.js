@@ -1,9 +1,9 @@
 import React from 'react';
 import "./home.css"
-import Carousel from '../Carousel';
+import Carousel from '../../components/Carousel';
 import Maincard from '../../comman/maincard';
 import CommonButton from '../../comman/Button';
-import Specialities from '../Specialities';
+import Specialities from '../../components/Specialities';
 
 const Home = () => {
 

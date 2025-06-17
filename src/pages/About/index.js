@@ -1,3 +1,4 @@
+
 import Maincard from "../../comman/maincard"
 import "./about.css"
 
@@ -22,9 +23,9 @@ const About = () => {
                                 ✔ Hygiene First: ISO-certified kitchen
                             </p>
 
-                            <p className="about-heading">FIELD TO FORK</p>
+                            <h1 className="about-heading">FARM TO TABLE THE VAIKUNTA WAY</h1>
                             <p className="about-paragraph">
-                                At <spam style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu  Restaurant</spam> "Field to Fork" isn't just a catchy phrase - it's our unwavering promise. It means we're deeply committed to sourcing the freshest, highest-quality ingredients directly from local farms and trusted growers.<br /><br />
+                                At <spam style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu  Restaurant</spam>  isn't just a catchy phrase - it's our unwavering promise. It means we're deeply committed to sourcing the freshest, highest-quality ingredients directly from local farms and trusted growers.<br /><br />
 
                                 Imagine vegetables picked at their peak ripeness, vibrant and bursting with natural flavor. Or meats and dairy from animals raised with care, contributing to a superior taste and texture. This direct connection ensures that every ingredient on your plate has traveled the shortest possible distance, preserving its nutritional value and bringing you an unparalleled dining experience.<br /><br />
 
