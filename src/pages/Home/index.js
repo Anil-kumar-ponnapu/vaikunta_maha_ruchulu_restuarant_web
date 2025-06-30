@@ -15,7 +15,7 @@ const Home = () => {
     <>
 
       <Maincard
-        image={"images/home_image  .jpeg"}
+        image={"images/home_image.jpeg"}
         title={"PURITY IN EVERY GRAIN"}
       />
       <div>
