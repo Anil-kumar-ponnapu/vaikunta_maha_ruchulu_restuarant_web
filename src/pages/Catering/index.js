@@ -51,7 +51,7 @@ const Catering = () => {
                 setLoading(false);
                 e.target.reset();
                 setErrors({});
-                setSuccess("Thanks from Vaikunta Maha Ruchulu!");
+                setSuccess("Thanks From Vaikunta Maha Ruchulu!");
 
             })
             .catch((error) => {

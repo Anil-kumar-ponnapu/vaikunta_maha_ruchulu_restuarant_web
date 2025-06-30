@@ -11,8 +11,8 @@
 
 .footer-container {
     display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; 
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: start;
     gap: 100px;
     max-width: 1000px;
@@ -59,7 +59,8 @@
     margin-bottom: 8px;
     color: white;
 }
-.footer-section ul li a{
+
+.footer-section ul li a {
     font-size: 15px;
     margin-bottom: 8px;
     color: white;
@@ -186,7 +187,7 @@
 
     .footer-section1 {
         position: relative;
-        bottom: 80px;
+        bottom: 120px;
         right: 11px;
 
     }

@@ -3,7 +3,7 @@
   padding-left: 200px;
   font-size: 40px;
   font-family: 'Cinzel', serif;
-  
+
 }
 
 .card-container {
@@ -12,7 +12,7 @@
 
 .card-image {
   width: 100%;
-  height: 750PX;
+  height: 850PX;
   display: block;
   object-fit: cover;
 }
@@ -55,15 +55,81 @@
 
 .maincard-children {
   margin-top: -10px;
+
 }
+
+.middle_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* adjust as needed */
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  /* optional: allows clicks to pass through */
+}
+
+.dine-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  /* Adjust spacing between main columns */
+  padding: 20px 0;
+}
+
+.dine-section__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.middle-images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dine-section__image-block {
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.dine-section__image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.dine-section__image1 {
+  width: 350px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 180px;
+  display: block;
+}
+
 
 .top-left {
   position: absolute;
   left: 50px;
-  bottom: 400px;
+  bottom: 700px;
   color: white;
   padding: 5px 10px;
-  font-size: 48px;
+  font-size: 28px;
   border-radius: 5px;
   animation: slideLeft 1s ease forwards;
   width: 600px;
@@ -113,8 +179,65 @@
   display: flex;
 }
 
-/* Responsive Design */
-@media (max-width: 1568px) {
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .mobile-only {
+    display: block;
+    padding-top: 200px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-section__image-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mobile-image-pair {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .mobile-dine-section__image--circle {
+    width: 180px;
+    height: 270px;
+    border-radius: 100px;
+    /* perfect circle */
+    object-fit: cover;
+  }
+
+  .mobile-dine-section__image--square {
+    width: 180px;
+    height: 270px;
+    border-radius: 15px;
+
+    object-fit: cover;
+  }
+
+
+
+
+
+
+
+
+
   .home-container {
     padding-left: 20px;
     font-size: 24px;
@@ -123,13 +246,13 @@
 
   .card-image {
     width: 100%;
-    height: 650px;
+
   }
 
   .card-text {
     position: absolute;
     left: 178px;
-    top: 500px;
+    top: 700px;
     font-size: 28px;
     width: 60%;
     font-family: 'Cinzel', serif;
@@ -160,20 +283,20 @@
   .info-textcontent {
     font-size: 18px;
     padding: 8px 16px;
- 
+
   }
 
   .review-heading {
 
-    
+
     font-size: 1.8rem;
-  font-weight: bold;
-  color: #1d4d2c;
-  /* border-left: 4px solid #f6921e; */
-  padding-left: 12px;
-  margin-bottom: 6px;
-  text-align: center;
-  font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: #1d4d2c;
+    /* border-left: 4px solid #f6921e; */
+    padding-left: 12px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
   }
 
 }
