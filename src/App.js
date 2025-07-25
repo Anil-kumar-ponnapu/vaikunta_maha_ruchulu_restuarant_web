@@ -1,36 +1,28 @@
-import Navbar from './components/NavBar';
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from './pages/Home';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Contact_Us from './pages/Contact-Us';
-
+import Navbar from './components/NavBar';
+import Footer from './components/FooterComponent';
 import ScrollToTopButton from './components/ScrollButton';
-import { useEffect, useState } from 'react';
 import Loader from './comman/Loader';
 
-import Catering from './pages/Catering';
-import Footer from './components/FooterComponent';
-import About from './pages/About';
+// Eagerly load Home
+import Home from './pages/Home';
 
-
-
-
+// Lazy load other pages
+const About = lazy(() => import('./pages/About'));
+const Contact_Us = lazy(() => import('./pages/Contact-Us'));
+const Catering = lazy(() => import('./pages/Catering'));
+const MediaGallery = lazy(() => import('./pages/Gallary'));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
-    // Instant scroll to top with no animation or loading
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [pathname]);
-
   return null;
 };
-
-
-
-
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -42,27 +34,51 @@ function App() {
     return () => clearTimeout(timeOut);
   }, []);
 
-  if (loader) {
-    return <Loader />;
-  }
+  useEffect(() => {
+    if (!window.fbq) {
+      (function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-  return (
-    <>
-      <Navbar />
+      window.fbq('init', '1157312469566154');
+      window.fbq('track', 'PageView');
+    }
+  }, []);
 
-      <ScrollToTop />
 
+return loader ? (
+  <Loader />
+) : (
+  <>
+    <Navbar />
+    <ScrollToTop />
+    
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact_Us />} />
         <Route path="/catering" element={<Catering />} />
+        <Route path="/gallery" element={<MediaGallery />} />
       </Routes>
+  
+    <Footer />
+    <ScrollToTopButton />
+  </>
+);
 
-      <Footer />
-      <ScrollToTopButton />
-    </>
-  );
 }
 
 export default App;

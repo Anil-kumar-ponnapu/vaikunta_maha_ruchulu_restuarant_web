@@ -5,7 +5,7 @@ import Maincard from "../../comman/maincard";
 import "./catering.css";
 import emailjs from "@emailjs/browser";
 import Loader from "../../comman/Loader";
-
+import SEO from "../../comman/SEO"
 const Catering = () => {
     const form = useRef(null);
     const [error, setErrors] = useState({});
@@ -62,8 +62,80 @@ const Catering = () => {
 
     return (
         <div>
+
+            <SEO
+                title="Vaikunta Maha Ruchulu – Pure Veg Andhra Restaurant in Vizag"
+                description="Vaikunta Maha Ruchulu – Vizag’s best pure veg restaurant. Enjoy authentic South Indian meals, special thalis, and homely flavors in a family-friendly setting. Visit us today!"
+                keywords="
+    Vaikunta Maha Ruchulu,
+    Traditional Andhra thali in Visakhapatnam,
+    Andhra veg meals Vizag,
+    Andhra vegetarian restaurant near me,
+    authentic Indian vegetarian Vizag,
+    Authentic Telugu meals Vizag,
+    best biryani in vizag,
+    best breakfast Vizag,
+    best dine-in in vizag,
+    Best gongura pappu in Vizag,
+    Best pure veg restaurant in Vizag,
+    best tiffins in vizag,
+    best veg food Vizag,
+    best veg restaurant vizag,
+    Best vegetarian restaurant Vizag,
+    Biryani,
+    brahmins food restaurant Vizag,
+    Budget veg meals near me,
+    Budget veg restaurant Vizag,
+    Dosa lover,
+    south indian food vizag,
+    South Indian specialties,
+    South Indian thali Vizag,
+    South Indian veg food Vizag,
+    Temple-style meals Andhra,
+    Thali,
+    Tiffins in Vizag,
+    Top veg dining places Visakhapatnam,
+    traditional andhra food,
+    Traditional vegetarian food Visakhapatnam,
+    Traditional, homemade-style food,
+    vaikunta Ruchulu,
+    vaishyas food restaurant Vizag,
+    Veg biryani Vizag,
+    veg Chinese Vizag,
+    Veg family restaurant Vizag,
+    veg Tandoori Vizag,
+    Vegetarian restaurant in Seethammadara,
+    vegetarian restaurant Visakhapatnam,
+    vegetarian thali vizag,
+    Vizag pure veg lunch,
+    Vizag veg biryani near me,
+    Family dinner pure veg restaurant Visakhapatnam,
+    family restaurant Vizag,
+    food near Balayya Sastri Layout,
+    healthy veg food Vizag,
+    home style veg meals vizag,
+    Idli dosa restaurant Vizag,
+    Jain food restaurant Vizag,
+    kshatriyas food restaurant Vizag,
+    Maha Ruchulu,
+    North Indian thali Vizag,
+    North Indian veg restaurant Vizag,
+    Paneer dishes Vizag,
+    Pure veg buffet Seethammadhara,
+    Pure veg restaurant in Vizag,
+    Pure vegetarian Andhra meals,
+    pure vegetarian thali Vizag,
+    restaurant near Police Station Road Vizag,
+    Sattvik food Vizag (no onion/garlic),
+    Sattvik meals Vizag,
+    Satvik food in Vizag
+  "
+                url="https://vaikuntamaharuchulu.com/"
+
+            />
+
             <Maincard
-                image={"images/Delicious Catering.svg"}
+                image={"assets/delicious-catering.svg"}
                 title={"VEGETARIAN CATERING FOR EVERY EVENT"}
                 textClass={"top-left"}
                 style={{ paddingTop: '80px', left: "20px", width: "400px" }}
@@ -71,15 +143,15 @@ const Catering = () => {
 
             <div
                 className="cateraing-conainer"
-                style={{ backgroundImage: "url('/images/informationCard.jpg')" }}
+                style={{ backgroundImage: "url('assets/images/informationCard.jpg')" }}
             >
                 <div className="catering-info">
                     <div className="catering-content">
-                        <img src="images/Catering-logo.svg" alt="Catering" className="catering-log" />
+                        <img src="assets/images/Catering-logo.svg" alt="Catering" className="catering-log" />
 
                         <div style={{}}>
                             <p>
-                                At <span style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu</span> we craft authentic, homestyle pure veg meals using time-honored recipes and the freshest ingredients...
+                                At <span style={{ fontWeight: '700' }}>Vaikunta Maha Ruchulu</span> we craft authentic, homestyle pure veg meals using time-honored recipes and the fresh ingredients...
                             </p>
                             <p>
 

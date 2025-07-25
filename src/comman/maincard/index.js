@@ -1,4 +1,3 @@
-// Maincard.jsx
 const Maincard = ({ image, title, textClass, children, style, middleContent }) => {
     return (
         <div className="card-container">
@@ -15,7 +14,6 @@ const Maincard = ({ image, title, textClass, children, style, middleContent }) =
                 {children && <div className="maincard-children">{children}</div>}
             </div>
         </div>
-
     );
 };
 

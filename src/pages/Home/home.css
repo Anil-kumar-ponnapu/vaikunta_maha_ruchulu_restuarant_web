@@ -41,7 +41,7 @@
 
 .card-text {
   position: absolute;
-  left: 1100px;
+  left: 1200px;
   bottom: 100px;
   color: white;
   padding: 5px 10px;
@@ -229,15 +229,6 @@
 
     object-fit: cover;
   }
-
-
-
-
-
-
-
-
-
   .home-container {
     padding-left: 20px;
     font-size: 24px;
@@ -251,8 +242,8 @@
 
   .card-text {
     position: absolute;
-    left: 178px;
-    top: 700px;
+    left: 200px;
+    top: 750px;
     font-size: 28px;
     width: 60%;
     font-family: 'Cinzel', serif;
@@ -262,10 +253,6 @@
   .maincard-children {
     margin-top: 2px;
   }
-
-
-
-
   .top-left {
     position: absolute;
     top: 60px;
@@ -273,6 +260,8 @@
     font-size: 28px;
     font-family: 'Cinzel', serif;
     animation: slideRight 1s ease forwards;
+    width: 300px;
+    margin-bottom: 10px;
   }
 
 

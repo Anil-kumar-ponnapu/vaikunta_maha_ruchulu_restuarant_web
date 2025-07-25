@@ -82,6 +82,14 @@
   color: #3b3b3b;
   text-transform: uppercase;
 }
+ .heading2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #3b3b3b;
+  text-transform: uppercase;
+}
 
 .info-item {
   display: flex;
@@ -178,4 +186,13 @@
   .social-icons {
     justify-content: center;
   }
+  .heading2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #3b3b3b;
+  text-transform: uppercase;
+  padding-left: 90px;
+}
 }

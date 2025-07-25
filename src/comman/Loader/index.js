@@ -5,7 +5,7 @@ const Loader = ({isTrueLoader}) => {
     <>
     {
       isTrueLoader ? <><div className="loader"></div></> :  <div className="loader-container">
-      <img src="images/vaikuntlogo.png" alt="Loading..." className="logo-spinner" />
+      <img src="assets/images/vaikuntlogo.png" alt="Loading..." className="logo-spinner" loading="lazy"/>
       <div className="loader"></div>
     </div>
     }

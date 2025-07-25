@@ -140,6 +140,7 @@
   .vmr-carousel-content {
     flex-direction: column;
     height: auto;
+    margin-right: 25px;
   }
 
   .vmr-carousel-card {
@@ -151,7 +152,7 @@
   .vmr-carousel-card img {
     height: 200px;
     object-fit: cover;
-    width: 100%;
+    width: 310px;
   }
 
   .vmr-carousel-card h3 {
@@ -160,7 +161,7 @@
   }
 
   .vmr-carousel-card p {
-    width: 340px;
+    width: 310px;
     font-size: 14px;
     color: #444;
     font-size: 1.2rem;

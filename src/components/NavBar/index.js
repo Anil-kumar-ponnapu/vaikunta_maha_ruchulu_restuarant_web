@@ -13,6 +13,7 @@ const navItems = [
 
     ]
   },
+  {name:"Gallery",path:"/gallery"},
   {
     name: "Contact-Us", path: "/contact",
 
@@ -33,7 +34,7 @@ export default function Navbar() {
     <div
       className="main-container"
       style={{
-        backgroundImage: "url('/images/informationCard.jpg')",
+        backgroundImage: "url('assets/images/informationCard.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -42,7 +43,7 @@ export default function Navbar() {
       <div className="logo">
         <Link to={"/"}>
           <img
-            src="images/vaikuntlogo.png"
+            src="assets/images/vaikuntlogo.png"
             className="vaikunta-logo"
             alt="Vaikunta Logo"
           />

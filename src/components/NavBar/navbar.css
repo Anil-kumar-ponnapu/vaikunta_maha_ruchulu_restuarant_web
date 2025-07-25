@@ -18,7 +18,7 @@
 
 .vaikunta-logo {
     width: 130px;
-    height: 100px;
+    height: 110px;
     padding-bottom: 20px;
 }
 
@@ -26,8 +26,6 @@
     font-size: 2rem;
     cursor: pointer;
     display: none;
-
-
 }
 
 .nav-item-with-submenu {

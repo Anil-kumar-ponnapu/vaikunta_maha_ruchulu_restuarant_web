@@ -21,7 +21,7 @@ const WelcomeCard = () => {
     <div class="card">
       <h2>Welcome to DreamCasa!</h2>
       <p>The Only Platform You Need for Your Dream Home</p>
-      <img src="logo.png" alt="DreamCasa Logo" class="logo" />
+      <img src="logo.png" alt="DreamCasa Logo" class="logo" loading="lazy" />
       <p>Explore our exclusive property listings, best offers, and home solutions!</p>
       <div class="buttons">
         <button class="btn learn-more">Learn More</button>

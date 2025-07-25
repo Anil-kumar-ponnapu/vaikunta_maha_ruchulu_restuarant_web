@@ -101,14 +101,14 @@ const ContactUs = () => {
         <>
             <div>
                 <Maincard
-                    image={"images/noppon-meenuch-MPLIm0LynRQ-unsplash.jpg"}
+                    image={"assets/noppon-meenuch-MPLIm0LynRQ-unsplash.jpg"}
                     title={"CONTACT US"}
                 />
             </div>
 
             <div
                 className="contact-container"
-                style={{ backgroundImage: 'url("images/informationCard.jpg")' }}
+                style={{ backgroundImage: 'url("assets/images/informationCard.jpg")' }}
             >
                 <div className="contact-details">
                     <div className="contact-form-container">
@@ -180,9 +180,9 @@ const ContactUs = () => {
 
                                     className="hover-underline"
                                 >
-                                    Dr No: 50-121-60/1A, 4th Town Police Station Road,
+                                    D No: 50-121-60/1A, 4th Town Police Station Road,
                                     <br /> Balayya Sastry Layout, <br /> Seethammadhara,
-                                    Visakhapatnam Pin No– 530013
+                                    Visakhapatnam-530013
                                 </a>
                             </div>
 
@@ -190,18 +190,17 @@ const ContactUs = () => {
                         </div>
 
                         <div className="section">
-                            <h2 className="heading">WORKING HOURS</h2>
+                            <h2 className="heading1">WORKING HOURS</h2>
                             <div className="info-item">
                                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffa500" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd" />
                                 </svg>
-
-                                <p>Opens Timings <spam>{"  "}</spam>6:00 Am – 11:30 Pm,</p>
+                                <p>Open Timings <spam>{"  "}</spam>7:00 AM – 10:00 PM</p>
                             </div>
                         </div>
 
                         <div className="section">
-                            <h2 className="heading">FOLLOW US</h2>
+                            <h2 className="heading2">FOLLOW US</h2>
                             <div className="social-icons">
                                 <a href="https://www.facebook.com/profile.php?id=61576739745925" target="_blank" rel="noopener noreferrer">
                                     <FaceBookIcon />
